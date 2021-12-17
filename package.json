@@ -1,0 +1,44 @@
+{
+  "name": "winston-playground",
+  "version": "0.0.1",
+  "description": "winston playground.",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "npm-run-all -s build:clean build:tsc",
+    "build:clean": "shx rm -rf build",
+    "build:tsc": "cross-env NODE_ENV=production tsc --outDir build src/index.ts",
+    "lint": "npm-run-all -s lint:prettier lint:eslint",
+    "lint:prettier": "prettier --check .",
+    "lint:eslint": "eslint .",
+    "format:fix": "npm-run-all -s format:fix:prettier format:fix:eslint",
+    "format:fix:prettier": "prettier  --write .",
+    "format:fix:eslint": "eslint --fix .",
+    "tsc:type-check": "tsc --noEmit",
+    "tsc:type-check:watch": "tsc --noEmit --watch",
+    "dev:run": "ts-node --files src/index.ts",
+    "dev:debug": "ts-node-dev --inspect --respawn --no-notify src/index.ts"
+  },
+  "author": "tt4g",
+  "license": "Apache-2.0",
+  "private": true,
+  "devDependencies": {
+    "@types/node": "16.11.7",
+    "@types/triple-beam": "1.3.2",
+    "@typescript-eslint/eslint-plugin": "5.7.0",
+    "@typescript-eslint/parser": "5.7.0",
+    "cross-env": "7.0.3",
+    "eslint": "8.4.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.3",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.5.1",
+    "shx": "0.3.3",
+    "ts-node": "10.4.0",
+    "ts-node-dev": "1.1.8",
+    "typescript": "4.5.4"
+  },
+  "dependencies": {
+    "winston": "3.3.3",
+    "winston-daily-rotate-file": "4.5.5"
+  }
+}

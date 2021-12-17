@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Start ts-node-dev",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      // Use `ts-node-dev` with Visual Studio Code:
+      // https://github.com/wclr/ts-node-dev/issues/9#issuecomment-648118389
+      "restart": true,
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node-dev",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "--inspect",
+        "--respawn",
+        "--no-notify",
+        "${workspaceFolder}/src/index.ts"
+      ],
+      // `console.log` to debugger console.
+      "outputCapture": "std"
+    }
+  ]
+}
