@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm-run-all -s build:clean build:tsc",
     "build:clean": "shx rm -rf build",
-    "build:tsc": "cross-env NODE_ENV=production tsc --outDir build src/index.ts",
+    "build:tsc": "cross-env NODE_ENV=production tsc --outDir build",
     "lint": "npm-run-all -s lint:prettier lint:eslint",
     "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint .",
