@@ -14,6 +14,7 @@
       "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node-dev",
       "cwd": "${workspaceFolder}",
       "args": [
+        "--files",
         "--inspect",
         "--respawn",
         "--no-notify",

@@ -16,7 +16,7 @@
     "tsc:type-check": "tsc --noEmit",
     "tsc:type-check:watch": "tsc --noEmit --watch",
     "dev:run": "ts-node --files src/index.ts",
-    "dev:debug": "ts-node-dev --inspect --respawn --no-notify src/index.ts"
+    "dev:debug": "ts-node-dev --files --inspect --respawn --no-notify src/index.ts"
   },
   "author": "tt4g",
   "license": "Apache-2.0",
